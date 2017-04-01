@@ -13,6 +13,7 @@ import copy
 
 #Iterative solution that optimizes time complexity using deque
 def find_winner(participants):
+    assert isinstance(participants, int), "Input needs to be in an integer"
     remaining_participants = deque(i for i in range(1, participants+1))
     while True:
         if len(remaining_participants) <= 1:
