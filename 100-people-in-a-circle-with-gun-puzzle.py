@@ -22,7 +22,7 @@ def find_winner(participants):
             return "The last survivor is particiant #{0}".format(remaining_participants[0])
         else:
             remaining_participants.append(remaining_participants.popleft())
-            remaining_participants.popleft()  # Pop sounds better than murder... ; can change this to pop() if want a killed list
+            remaining_participants.popleft()  # Pop sounds better than murder...
 
 
 print(find_winner(participants))
