@@ -11,12 +11,9 @@ There are 100 people starting from 1 to 100.
 from collections import deque
 import copy
 
-participants = deque(i for i in range(1, 101))
-
 #Iterative solution that optimizes time complexity using deque
 def find_winner(participants):
-    assert isinstance(participants, deque), "Participants need to be in an a deque"
-    remaining_participants = copy.copy(participants)
+    remaining_participants = deque(i for i in range(1, participants+1))
     while True:
         if len(remaining_participants) <= 1:
             return "The last survivor is particiant #{0}".format(remaining_participants[0])
@@ -25,4 +22,4 @@ def find_winner(participants):
             remaining_participants.popleft()  # Pop sounds better than murder...
 
 
-print(find_winner(participants))
+print(find_winner(100))
