@@ -9,7 +9,6 @@ There are 100 people starting from 1 to 100.
 """
 
 from collections import deque
-import copy
 
 #Iterative solution that optimizes time complexity using deque
 def find_winner(participants):
